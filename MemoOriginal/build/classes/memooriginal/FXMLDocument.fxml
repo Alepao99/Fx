@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="800.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memooriginal.FXMLDocumentController">
+   <children>
+      <VBox layoutX="726.0" layoutY="307.0" prefHeight="800.0" prefWidth="980.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="960.0">
+               <children>
+                  <Label text="Titolo" />
+                  <TextField fx:id="titoloFld" alignment="TOP_LEFT" prefHeight="31.0" prefWidth="840.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="155.0" prefWidth="960.0">
+               <children>
+                  <Label text="Testo" />
+                  <TextField fx:id="testoFld" alignment="TOP_LEFT" prefHeight="149.0" prefWidth="842.0">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="creaMemo" mnemonicParsing="false" onAction="#creaMemoAct" text="Crea Memo">
+                     <HBox.margin>
+                        <Insets left="85.0" right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="pulisci" mnemonicParsing="false" onAction="#pulisciAct" text="Pulisci">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="confirmModify" mnemonicParsing="false" onAction="#confirmModifyAct" text="Conferma modifiche">
+                     <HBox.margin>
+                        <Insets left="300.0" right="55.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="annullaModifiche" mnemonicParsing="false" onAction="#annullaModificheAct" text="Annulla Modifiche">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="308.0" prefWidth="960.0">
+               <children>
+                  <Label text="Elenco memo" />
+                  <ListView fx:id="listView" onMouseClicked="#setTittleText" prefHeight="298.0" prefWidth="840.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ListView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="modificaMemo" mnemonicParsing="false" onAction="#modificaMemoAct" text="Modifica Memo">
+                     <HBox.margin>
+                        <Insets left="90.0" right="30.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="cancellaMemo" mnemonicParsing="false" onAction="#cancellaMemoAct" text="Cancella Memo">
+                     <HBox.margin>
+                        <Insets right="467.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="salvaSuFile" mnemonicParsing="false" onAction="#salvaSuFileAct" text="Salva su File">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

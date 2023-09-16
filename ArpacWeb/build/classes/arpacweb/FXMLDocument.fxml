@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="arpacweb.FXMLDocumentController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="408.0" layoutY="202.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox layoutX="96.0" layoutY="107.0" prefHeight="578.0" prefWidth="228.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="Impostazioni report" underline="true" />
+                        <DatePicker fx:id="datePick" />
+                        <Label text="Limite acquisizioni" />
+                        <TextField fx:id="limitFld" />
+                        <Button mnemonicParsing="false" onAction="#getDati" text="Ottieni dati" />
+                        <ProgressIndicator fx:id="progressIndi" progress="0.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="mainTab" layoutX="126.0" layoutY="41.0" prefHeight="578.0" prefWidth="542.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                      <TableColumn fx:id="luogo" prefWidth="75.0" text="Luogo" />
+                      <TableColumn fx:id="sensore" prefWidth="75.0" text="Sensore" />
+                        <TableColumn fx:id="ora" prefWidth="75.0" text="Ora" />
+                        <TableColumn fx:id="valore" prefWidth="75.0" text="Valore" />
+                        <TableColumn fx:id="unitaDiMisura" prefWidth="75.0" text="Unità di misura" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

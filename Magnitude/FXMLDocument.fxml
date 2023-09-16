@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ingvurl.FXMLDocumentController">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="mainTab" prefHeight="481.0" prefWidth="740.0">
+                    <columns>
+                        <TableColumn fx:id="dateCln" prefWidth="304.0" text="Date" />
+                        <TableColumn fx:id="magnitudeCln" prefWidth="115.0" text="Magnitude" />
+                        <TableColumn fx:id="locationCln" minWidth="0.0" prefWidth="303.0" text="Location" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="30.0" />
+                    </VBox.margin>
+                </TableView>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                    </VBox.margin>
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#loadData" text="Load Data">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </Button>
+                        <ProgressIndicator fx:id="indicator" visible="false">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="50.0" top="10.0" />
+                            </HBox.margin>
+                        </ProgressIndicator>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
